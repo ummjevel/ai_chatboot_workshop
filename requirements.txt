@@ -1,0 +1,67 @@
+# AI 챗봇 멘토링 - 1차시 기본 구현용 라이브러리
+# 최신 버전 기준 (2024년 8월)
+
+# === 핵심 LLM 연동 ===
+openai>=1.35.0                    # OpenAI GPT API 클라이언트
+anthropic>=0.26.0                 # Claude API (선택사항)
+
+# === 웹 프레임워크 ===
+streamlit>=1.36.0                 # 빠른 웹 UI 프로토타입
+fastapi>=0.111.0                  # REST API 서버 (2차시 이후)
+uvicorn[standard]>=0.30.0         # ASGI 서버
+
+# === 환경 설정 및 유틸리티 ===
+python-dotenv>=1.0.1              # .env 파일 로드
+pydantic>=2.7.0                   # 데이터 검증 및 설정 관리
+typer>=0.12.0                     # CLI 인터페이스
+rich>=13.7.1                      # 예쁜 콘솔 출력
+
+# === 데이터베이스 및 캐싱 ===
+redis>=5.0.7                      # 세션 관리 및 캐싱
+# sqlite3는 Python 내장 모듈이므로 별도 설치 불필요
+
+# === 비동기 처리 ===
+# asyncio는 Python 내장 모듈
+aiohttp>=3.9.5                    # 비동기 HTTP 클라이언트
+aiofiles>=24.1.0                  # 비동기 파일 I/O
+
+# === 로깅 및 모니터링 ===
+structlog>=24.2.0                 # 구조화된 로깅
+prometheus-client>=0.20.0         # 메트릭 수집
+
+# === 프롬프트 엔지니어링 (2차시) ===
+jinja2>=3.1.4                     # 동적 프롬프트 템플릿
+
+# === RAG 구현 (3차시) ===
+langchain>=0.2.5                  # LLM 애플리케이션 프레임워크
+langchain-openai>=0.1.8           # OpenAI 통합
+langchain-community>=0.2.5        # 커뮤니티 확장
+chromadb>=0.5.0                   # 벡터 데이터베이스
+faiss-cpu>=1.8.0                  # 벡터 검색 (CPU 버전)
+
+# === 문서 처리 ===
+pypdf>=4.2.0                      # PDF 파싱 (PyPDF2 후속)
+python-docx>=1.1.2                # Word 문서 처리
+unstructured>=0.14.6              # 다양한 문서 형식 지원
+
+# === 웹 크롤링 및 API 호출 ===
+requests>=2.32.3                  # HTTP 클라이언트
+httpx>=0.27.0                     # 비동기 HTTP 클라이언트
+beautifulsoup4>=4.12.3            # HTML 파싱
+
+# === 데이터 분석 및 시각화 ===
+pandas>=2.2.2                     # 데이터 처리
+numpy>=1.26.4                     # 수치 연산
+matplotlib>=3.9.0                 # 그래프 생성
+seaborn>=0.13.2                   # 통계 시각화
+
+# === 개발 및 테스트 도구 ===
+pytest>=8.2.2                     # 테스트 프레임워크
+pytest-asyncio>=0.23.7            # 비동기 테스트
+black>=24.4.2                     # 코드 포매터
+ruff>=0.5.0                       # 빠른 린터 (flake8 대체)
+mypy>=1.10.1                      # 정적 타입 체커
+
+# === Jupyter 노트북 지원 ===
+jupyter>=1.0.0                    # Jupyter Lab/Notebook
+ipywidgets>=8.1.3                 # 인터랙티브 위젯
